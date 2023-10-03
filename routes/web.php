@@ -47,5 +47,3 @@ Route::resource('/voting', VotingController::class);
 
 
 
-
-// ascsacScx
