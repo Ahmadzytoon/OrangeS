@@ -44,3 +44,8 @@ Route::prefix('user')->name('user.')->group(function () {
 Route::resource('/voting', VotingController::class);
 // Route::resource('/website', VotingController::class);
 });
+
+
+
+
+// ascsacScx
