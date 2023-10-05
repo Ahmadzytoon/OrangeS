@@ -27,55 +27,55 @@
 
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
-<style>
-  @media (min-width: 992px){
-  .col-lg-3 {
-      flex: 0 0 auto;
-      width: 20%;
+        <style>
+          @media (min-width: 992px){
+          .col-lg-3 {
+              flex: 0 0 auto;
+              width: 20%;
 
-  }
-  }
-    @media (min-width: 1350px){
+          }
+          }
+            @media (min-width: 1350px){
 
-  .team .member .member-img {
-      position: relative;
-      overflow: hidden;
-      min-height: 245px;
-  } 
+          .team .member .member-img {
+              position: relative;
+              overflow: hidden;
+              min-height: 245px;
+          } 
 
-  }
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-    min-height: 182px;
-  }
-  /* .team .member .member-img {
-      position: relative;
-      overflow: hidden;
-      min-height: 245px;
-  } */
-  .alert {
-    --bs-alert-bg: transparent;
-    --bs-alert-padding-x: 1rem;
-    --bs-alert-padding-y: 1rem;
-    --bs-alert-margin-bottom: 1rem;
-    --bs-alert-color: inherit;
-    --bs-alert-border-color: transparent;
-    --bs-alert-border: var(--bs-border-width) solid var(--bs-alert-border-color);
-    --bs-alert-border-radius: var(--bs-border-radius);
-    --bs-alert-link-color: inherit;
-    position: relative;
-    padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
-    margin-bottom: var(--bs-alert-margin-bottom);
-    color: #ff7900;
-    background-color: #000;
-    box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    box-shadow: #000 0px 5px 15px;
-    border: black;
-    border-radius: var(--bs-alert-border-radius);
-    text-align: center;
-}
-</style>
+          }
+          .img-fluid {
+            max-width: 100%;
+            height: auto;
+            min-height: 182px;
+          }
+          /* .team .member .member-img {
+              position: relative;
+              overflow: hidden;
+              min-height: 245px;
+          } */
+          .alert {
+            --bs-alert-bg: transparent;
+            --bs-alert-padding-x: 1rem;
+            --bs-alert-padding-y: 1rem;
+            --bs-alert-margin-bottom: 1rem;
+            --bs-alert-color: inherit;
+            --bs-alert-border-color: transparent;
+            --bs-alert-border: var(--bs-border-width) solid var(--bs-alert-border-color);
+            --bs-alert-border-radius: var(--bs-border-radius);
+            --bs-alert-link-color: inherit;
+            position: relative;
+            padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
+            margin-bottom: var(--bs-alert-margin-bottom);
+            color: #ff7900;
+            background-color: #000;
+            box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: #000 0px 5px 15px;
+            border: black;
+            border-radius: var(--bs-alert-border-radius);
+            text-align: center;
+            }
+        </style>
 @if(session()->get('voted'))
         <script>    // التنقل إلى العنصر عند تحميل الصفحة
                 document.addEventListener('DOMContentLoaded', function() {
@@ -153,6 +153,7 @@ BagGuard
   </section><!-- End Hero -->
 
   <main id="main" >
+
     <!-- ======= Clients Section ======= -->
     <!-- <section id="clients" class="clients">
       <div class="container" data-aos="zoom-in">
@@ -174,7 +175,6 @@ BagGuard
       </div>
     </section> -->
     <!-- End Clients Section -->
-
 
 
   {{-- {{dd($teams)}} --}}
@@ -200,9 +200,9 @@ BagGuard
           <h3>OSC #2023</h3>
         </div>
 
-        <div class="row" >
+        <div class="row"style="justify-content: center;" >
           {{-- tefli --}}
-          <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-5 col-sm-6  d-flex align-items-stretch">
             <div class="member"  data-aos-delay="100">
               <div class="member-img">
                 <img src="/assets/img/team/tefli.png" class="img-fluid" alt="Tefli">
@@ -221,7 +221,7 @@ BagGuard
             </div>
           </div>          
           {{-- aigo --}}
-          <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-5 col-sm-6  d-flex align-items-stretch">
             <div class="member" data-aos-delay="100">
               <div class="member-img">
                 <img src="/assets/img/team/aigo.png" class="img-fluid" alt="AiGo">
@@ -240,7 +240,7 @@ BagGuard
             </div>
           </div>
           {{-- AgriBot --}}
-          <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-5 col-sm-6  d-flex align-items-stretch">
             <div class="member" data-aos-delay="100">
               <div class="member-img">
                 <img src="/assets/img/team/soler.png" class="img-fluid" alt="Solar-AgriBot">
@@ -259,7 +259,7 @@ BagGuard
             </div>
           </div>
           {{-- BaGard --}}
-          <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-5 col-sm-6  d-flex align-items-stretch">
             <div class="member" data-aos-delay="100">
               <div class="member-img">
                 <img src="/assets/img/team/bagard.png" class="img-fluid" alt="BaGard">
@@ -279,7 +279,7 @@ BagGuard
             </div>
           </div>
           {{-- OptiGuide --}}
-          <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
+          <div class="col-lg-3 col-md-5 col-sm-6 d-flex align-items-stretch">
             <div class="member"   data-aos-delay="100">
               <div class="member-img">
                 <img src="/assets/img/team/opti.png" class="img-fluid" alt="OptiGuide">
