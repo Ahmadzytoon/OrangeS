@@ -235,7 +235,7 @@ BagGuard
               </div>
               <div class="member-info">
                 <h4>AiGo</h4>
-                <span>Your Pocket-Sized Time-Travel Guide Buddy,Providing Immersive Historical Tours Experiences.</span>
+                <span>Your Pocket-Sized Time-Travel Guide Buddy, Providing Immersive Historical Tours Experiences</span>
               </div>
             </div>
           </div>
