@@ -54,7 +54,52 @@
       overflow: hidden;
       min-height: 245px;
   } */
+  .alert {
+    --bs-alert-bg: transparent;
+    --bs-alert-padding-x: 1rem;
+    --bs-alert-padding-y: 1rem;
+    --bs-alert-margin-bottom: 1rem;
+    --bs-alert-color: inherit;
+    --bs-alert-border-color: transparent;
+    --bs-alert-border: var(--bs-border-width) solid var(--bs-alert-border-color);
+    --bs-alert-border-radius: var(--bs-border-radius);
+    --bs-alert-link-color: inherit;
+    position: relative;
+    padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
+    margin-bottom: var(--bs-alert-margin-bottom);
+    color: #ff7900;
+    background-color: #000;
+    box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: #000 0px 5px 15px;
+    border: black;
+    border-radius: var(--bs-alert-border-radius);
+    text-align: center;
+}
 </style>
+@if(session()->get('voted'))
+        <script>    // التنقل إلى العنصر عند تحميل الصفحة
+                document.addEventListener('DOMContentLoaded', function() {
+                    scrollToElement();
+                });
+        
+                // التنقل إلى العنصر عند تغيير الهاش (على سبيل المثال، عند الانتقال من صفحة لأخرى)
+                window.addEventListener('hashchange', function() {
+                    scrollToElement();
+                });
+        
+                // الدالة للتمرير إلى العنصر الذي يحمل الهاش المحدد
+                function scrollToElement() {
+                    var hash ="AAA" // استخراج الهاش من رابط الصفحة
+        
+                    // التحقق مما إذا كان الهاش غير فارغ وموجود في الصفحة
+                    if (hash && document.getElementById(hash)) {
+                        var targetElement = document.getElementById(hash);
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth' // تمرير بشكل سلس
+                        });
+                    }
+                }</script>
+  @endif              
 </head>
 <!-- 
 OptiGuide
@@ -90,17 +135,7 @@ BagGuard
   
   </header><!-- End Header -->
   
-  @if(session()->get('voted'))
-  <div class="row"></div>
-  <div class="alert alert-success" role="alert" id="dev" style="margin-right: 4rem;">
-    The team was voted in successfully
-    </div>
-  @endif
-  <script>
-      setTimeout(function() {
-        document.getElementById('dev').style.display = 'none';
-    }, 5000);
-  </script>    
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
@@ -117,7 +152,7 @@ BagGuard
   
   </section><!-- End Hero -->
 
-  <main id="main">
+  <main id="main" >
     <!-- ======= Clients Section ======= -->
     <!-- <section id="clients" class="clients">
       <div class="container" data-aos="zoom-in">
@@ -143,25 +178,37 @@ BagGuard
 
 
   {{-- {{dd($teams)}} --}}
-
+<span id="AAA"></span>
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
-      <div class="container" data-aos="fade-up">
+    <section id="team" class="team section-bg" >
+      <div class="container" data-aos="fade-up" >
+        @if(session()->get('voted'))
+
+              <div class="row "></div>
+              <div class="alert alert-warning" role="alert" id="dev" >
+                 The team was voted in successfully <i class="bi bi-clipboard2-check-fill"></i>
+                </div>
+              @endif
+              <script>
+                  setTimeout(function() {
+                    document.getElementById('dev').style.display = 'none';
+                }, 8000);
+              </script>  
 
         <div class="section-title">
           <h2>Team Selection</h2>
           <h3>OSC #2023</h3>
         </div>
 
-        <div class="row">
+        <div class="row" >
 
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up"  data-aos-delay="100">
+            <div class="member"   data-aos-delay="100">
               <div class="member-img">
                 <img src="/assets/img/team/opti.png" class="img-fluid" alt="OptiGuide">
                 <div class="social">
                   @if (in_array("1", $teams))
-                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>      
+                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>      
                   @else
                       <a href="{{route('user.voting.show',1)}}">Vote</i></a>              
                   @endif  
@@ -176,10 +223,10 @@ BagGuard
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
             <div class="member" data-aos-delay="100">
               <div class="member-img">
-                <img src="/assets/img/team/Agribot_highq_logo2.png" class="img-fluid" alt="Solar-AgriBot">
+                <img src="/assets/img/team/soler.png" class="img-fluid" alt="Solar-AgriBot">
                 <div class="social">
                   @if (in_array("2", $teams))
-                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>                  
+                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>                  
                   @else
                       <a href="{{route('user.voting.show',2)}}">Vote</i></a>
                   @endif
@@ -194,10 +241,10 @@ BagGuard
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
             <div class="member" data-aos-delay="100">
               <div class="member-img">
-                <img src="/assets/img/team/aigo.jpg" class="img-fluid" alt="">
+                <img src="/assets/img/team/aigo.png" class="img-fluid" alt="AiGo">
                 <div class="social">
                   @if (in_array("3", $teams))
-                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>                  
+                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>                  
                   @else
                       <a href="{{route('user.voting.show',3)}}">Vote</i></a>
                   @endif
@@ -212,10 +259,10 @@ BagGuard
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
             <div class="member"  data-aos-delay="100">
               <div class="member-img">
-                <img src="/assets/img/team/TEFLI-Stickers.jpg" class="img-fluid" alt="">
+                <img src="/assets/img/team/tefli.png" class="img-fluid" alt="Tefli">
                 <div class="social">
                   @if (in_array("4", $teams))
-                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>
+                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>
                   @else
                   <a href="{{route('user.voting.show',4)}}">Vote</i></a>
                   @endif
@@ -228,12 +275,12 @@ BagGuard
             </div>
           </div>
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member" data-aos-delay="100">
               <div class="member-img">
-                <img src="/assets/img/team/bagard.png" class="img-fluid" alt="">
+                <img src="/assets/img/team/bagard.png" class="img-fluid" alt="BaGard">
                 <div class="social">
                   @if (in_array("5", $teams))
-                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>
+                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>
                   @else
                       <a href="{{route('user.voting.show',5)}}">Vote</i></a>
 
