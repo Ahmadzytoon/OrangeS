@@ -21,8 +21,6 @@ class VotingController extends Controller
     } else {
       $user_id = session()->get('id');
       $data=User::where('id',$user_id)->first();
-
-
       $team=Rate::where('user_id',$user_id)->get();
 
       $ratedTeamByUser = [];
@@ -82,7 +80,7 @@ class VotingController extends Controller
       $Rate->average =$average;
       $Rate->save();
   
-      return redirect()->route('user.voting.index')->with('voted', 'The team was voted in successfully');;
+      return redirect()->route('user.voting.index')->with('voted', 'The Team Was Voted In Successfully');;
 
     }
 

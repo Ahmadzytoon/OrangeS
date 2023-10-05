@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>VotePad</title>
+  <title>JuryVote</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   {{-- href="{{asset('/login/mobile_logo_1_0.png')}}" --}}
@@ -29,31 +29,31 @@
   <link href="/assets/css/style.css" rel="stylesheet">
 <style>
   @media (min-width: 992px){
-.col-lg-3 {
-    flex: 0 0 auto;
-    width: 20%;
+  .col-lg-3 {
+      flex: 0 0 auto;
+      width: 20%;
 
-}
-}
-  @media (min-width: 1350px){
+  }
+  }
+    @media (min-width: 1350px){
 
-.team .member .member-img {
-    position: relative;
-    overflow: hidden;
-    min-height: 245px;
-} 
+  .team .member .member-img {
+      position: relative;
+      overflow: hidden;
+      min-height: 245px;
+  } 
 
-}
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  min-height: 182px;
-}
-/* .team .member .member-img {
-    position: relative;
-    overflow: hidden;
-    min-height: 245px;
-} */
+  }
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    min-height: 182px;
+  }
+  /* .team .member .member-img {
+      position: relative;
+      overflow: hidden;
+      min-height: 245px;
+  } */
 </style>
 </head>
 <!-- 
@@ -70,20 +70,11 @@ BagGuard
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
       
-      <h1 class="logo me-auto"><a href="{{route('user.voting.index')}}" class="logo me-auto"><img src="/assets/logo.svg" alt=""></a><a href="index.html">VotePad</a></h1>
+      <h1 class="logo me-auto"><a href="{{route('user.voting.index')}}" class="logo me-auto"><img src="/assets/logo.svg" alt=""></a><a href="index.html">JuryVote</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      @if(session()->get('voted'))
-      <div class="alert alert-light" role="alert" id="dev" style="margin-right: 4rem;">
-        The team was voted in successfully
-        </div>
-      @endif
-      <script>
-          setTimeout(function() {
-            document.getElementById('dev').style.display = 'none';
-        }, 4000);
-      </script>    
+
         <nav id="navbar" class="navbar order-last order-lg-0">
-        <h6 style="color: white;"><span style="color: #ff7900;">Welcom, </span> {{$data->name}}<h5>
+        <h6 style="color: white;"><span style="color: #ff7900;">Welcome, </span> {{$data->name}}<h5>
         <ul>
           {{-- <li><h4>welcom,</h4></li> --}}
     
@@ -99,7 +90,17 @@ BagGuard
   
   </header><!-- End Header -->
   
-
+  @if(session()->get('voted'))
+  <div class="row"></div>
+  <div class="alert alert-success" role="alert" id="dev" style="margin-right: 4rem;">
+    The team was voted in successfully
+    </div>
+  @endif
+  <script>
+      setTimeout(function() {
+        document.getElementById('dev').style.display = 'none';
+    }, 5000);
+  </script>    
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
@@ -107,9 +108,9 @@ BagGuard
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <div class="row">
         <div class="col-xl-6">
-          <h1>Orange Summer challenge 2023</h1>
+          <h1>Orange Summer Challenge 2023</h1>
           <!-- <h2></h2> -->
-          <a href="#team" class="btn-get-started scrollto">Start voting</a>
+          <a href="#team" class="btn-get-started scrollto">Start Voting</a>
         </div>
       </div>
     </div>
@@ -155,96 +156,74 @@ BagGuard
         <div class="row">
 
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member" data-aos="fade-up"  data-aos-delay="100">
               <div class="member-img">
-                <img src="/assets/img/team/opti.png" class="img-fluid" alt="">
+                <img src="/assets/img/team/opti.png" class="img-fluid" alt="OptiGuide">
                 <div class="social">
-                  {{-- @foreach ($teams as $item) --}}
                   @if (in_array("1", $teams))
                   <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>      
-                
-
                   @else
-                      <a href="{{route('user.voting.show',1)}}">Vote</i></a>
-                      
-                  @endif
-                  {{-- @endforeach --}}
-                  {{-- <a href="{{route('user.voting.show',1)}}">Vote</i></a> --}}
-
-              
+                      <a href="{{route('user.voting.show',1)}}">Vote</i></a>              
+                  @endif  
                 </div>
-              </div>
+               </div>
               <div class="member-info">
                 <h4>OptiGuide</h4>
-                <span>A futuristic visual Aid comprised of an AI-powered phone application and two tactile wristbands.</span>
+                <span>A Futuristic Visual Aid Comprised Of An AI-Powered Phone Application And Two Tactile Wristbands.</span>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member" data-aos-delay="100">
               <div class="member-img">
-                <img src="/assets/img/team/Agribot_highq_logo2.png" class="img-fluid" alt="">
+                <img src="/assets/img/team/Agribot_highq_logo2.png" class="img-fluid" alt="Solar-AgriBot">
                 <div class="social">
-                  {{-- @foreach ($teams as $item) --}}
                   @if (in_array("2", $teams))
                   <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>                  
-                
-
                   @else
                       <a href="{{route('user.voting.show',2)}}">Vote</i></a>
                   @endif
-              {{-- @endforeach               --}}
                 </div>
               </div>
               <div class="member-info">
                 <h4>Solar-AgriBot</h4>
-                <span>An autonomous agricultural robot designed to revolutionize modern farming.</span>
+                <span>An Autonomous Agricultural Robot Designed To Revolutionize Modern Farming.</span>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member" data-aos-delay="100">
               <div class="member-img">
                 <img src="/assets/img/team/aigo.jpg" class="img-fluid" alt="">
                 <div class="social">
-                  {{-- @foreach ($teams as $item) --}}
                   @if (in_array("3", $teams))
                   <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>                  
-                  
-
                   @else
                       <a href="{{route('user.voting.show',3)}}">Vote</i></a>
                   @endif
-                  {{-- @endforeach --}}
-              
                 </div>
               </div>
               <div class="member-info">
                 <h4>AiGo</h4>
-                <span>Your pocket-sized time-travel guide buddy, providing immersive historical tours experiences.</span>
+                <span>Your Pocket-Sized Time-Travel Guide Buddy,Providing Immersive Historical Tours Experiences.</span>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member"  data-aos-delay="100">
               <div class="member-img">
                 <img src="/assets/img/team/TEFLI-Stickers.jpg" class="img-fluid" alt="">
                 <div class="social">
-                  {{-- @foreach ($teams as $item) --}}
                   @if (in_array("4", $teams))
                   <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>
-                  
-                  
                   @else
-                      <a href="{{route('user.voting.show',4)}}">Vote</i></a>
-
+                  <a href="{{route('user.voting.show',4)}}">Vote</i></a>
                   @endif
-              {{-- @endforeach               --}}
                 </div>
               </div>
               <div class="member-info">
                 <h4>Tefli</h4>
-                <span>A baby monitoring device that analyzes and predicts a baby's needs based on their cry.</span>
+                <span>A Baby Monitoring Device That Analyzes And Predicts A Baby's Needs Based On Their Cry.</span>
               </div>
             </div>
           </div>
@@ -253,21 +232,17 @@ BagGuard
               <div class="member-img">
                 <img src="/assets/img/team/bagard.png" class="img-fluid" alt="">
                 <div class="social">
-                  {{-- @foreach ($teams as $item) --}}
                   @if (in_array("5", $teams))
                   <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 2px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>
-                
-
                   @else
                       <a href="{{route('user.voting.show',5)}}">Vote</i></a>
 
                   @endif
-                  {{-- @endforeach            --}}
                 </div>
               </div>
               <div class="member-info">
                 <h4>BagGuard</h4>
-                <span>Revolutionizing travel with its state-of-the-art luggage tracking system.</span>
+                <span>Revolutionizing Travel With Its State-Of-The-Art Luggage Tracking System.</span>
               </div>
             </div>
           </div>

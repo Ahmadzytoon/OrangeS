@@ -1257,16 +1257,19 @@ section {
 }
 
 .team .member .social {
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-  right: 0;
-  opacity: 0;
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    /* position: absolute; */
+    left: 0;
+    bottom: 30px;
+    right: 0;
+    /* opacity: 0; */
+    /* transition: ease-in-out 0.3s; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 11px; */
+    height: 2.5rem;
+     }
+
 
 .team .member .social a {
   transition: color 0.3s;
@@ -2098,8 +2101,7 @@ section {
 
 #footer .credits {
   padding-top: 5px;
-  font-size: 13px;
-}
+  font-size: 0.8rem;}
 
 #footer .social-links a {
   font-size: 18px;
