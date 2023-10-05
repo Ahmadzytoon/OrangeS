@@ -115,7 +115,7 @@ BagGuard
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
       
-      <h1 class="logo me-auto"><a href="{{route('user.voting.index')}}" class="logo me-auto"><img src="/assets/logo.svg" alt=""></a><a href="index.html">JuryVote</a></h1>
+      <h1 class="logo me-auto"><a href="{{route('user.voting.index')}}" class="logo me-auto"><img src="/assets/logo.svg" alt="JuryVote"></a><a href="index.html">JuryVote</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
 
         <nav id="navbar" class="navbar order-last order-lg-0">
@@ -159,14 +159,14 @@ BagGuard
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt="JuryVote"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt="JuryVote"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt="JuryVote"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt="JuryVote"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt="JuryVote"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt="JuryVote"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt="JuryVote"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt="JuryVote"></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -201,43 +201,26 @@ BagGuard
         </div>
 
         <div class="row" >
-
+          {{-- tefli --}}
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
-            <div class="member"   data-aos-delay="100">
+            <div class="member"  data-aos-delay="100">
               <div class="member-img">
-                <img src="/assets/img/team/opti.png" class="img-fluid" alt="OptiGuide">
+                <img src="/assets/img/team/tefli.png" class="img-fluid" alt="Tefli">
                 <div class="social">
-                  @if (in_array("1", $teams))
-                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>      
+                  @if (in_array("4", $teams))
+                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>
                   @else
-                      <a href="{{route('user.voting.show',1)}}">Vote</i></a>              
-                  @endif  
-                </div>
-               </div>
-              <div class="member-info">
-                <h4>OptiGuide</h4>
-                <span>A Futuristic Visual Aid Comprised Of An AI-Powered Phone Application And Two Tactile Wristbands.</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
-            <div class="member" data-aos-delay="100">
-              <div class="member-img">
-                <img src="/assets/img/team/soler.png" class="img-fluid" alt="Solar-AgriBot">
-                <div class="social">
-                  @if (in_array("2", $teams))
-                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>                  
-                  @else
-                      <a href="{{route('user.voting.show',2)}}">Vote</i></a>
+                  <a href="{{route('user.voting.show',4)}}">Vote</i></a>
                   @endif
                 </div>
               </div>
               <div class="member-info">
-                <h4>Solar-AgriBot</h4>
-                <span>An Autonomous Agricultural Robot Designed To Revolutionize Modern Farming.</span>
+                <h4>Tefli</h4>
+                <span>A Baby Monitoring Device That Analyzes And Predicts A Baby's Needs Based On Their Cry.</span>
               </div>
             </div>
-          </div>
+          </div>          
+          {{-- aigo --}}
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
             <div class="member" data-aos-delay="100">
               <div class="member-img">
@@ -256,24 +239,26 @@ BagGuard
               </div>
             </div>
           </div>
+          {{-- AgriBot --}}
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
-            <div class="member"  data-aos-delay="100">
+            <div class="member" data-aos-delay="100">
               <div class="member-img">
-                <img src="/assets/img/team/tefli.png" class="img-fluid" alt="Tefli">
+                <img src="/assets/img/team/soler.png" class="img-fluid" alt="Solar-AgriBot">
                 <div class="social">
-                  @if (in_array("4", $teams))
-                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>
+                  @if (in_array("2", $teams))
+                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>                  
                   @else
-                  <a href="{{route('user.voting.show',4)}}">Vote</i></a>
+                      <a href="{{route('user.voting.show',2)}}">Vote</i></a>
                   @endif
                 </div>
               </div>
               <div class="member-info">
-                <h4>Tefli</h4>
-                <span>A Baby Monitoring Device That Analyzes And Predicts A Baby's Needs Based On Their Cry.</span>
+                <h4>Solar-AgriBot</h4>
+                <span>An Autonomous Agricultural Robot Designed To Revolutionize Modern Farming.</span>
               </div>
             </div>
           </div>
+          {{-- BaGard --}}
           <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
             <div class="member" data-aos-delay="100">
               <div class="member-img">
@@ -293,7 +278,25 @@ BagGuard
               </div>
             </div>
           </div>
-
+          {{-- OptiGuide --}}
+          <div class="col-lg-3 col-md-5 d-flex align-items-stretch">
+            <div class="member"   data-aos-delay="100">
+              <div class="member-img">
+                <img src="/assets/img/team/opti.png" class="img-fluid" alt="OptiGuide">
+                <div class="social">
+                  @if (in_array("1", $teams))
+                  <h6 style="/* color: #ff7900; *//* background-color: black; */transition: none;/* color: #111111; */margin: 0 3px;border-radius: 5px;width: 84px;height: 36px;background: #2b2b2b;display: inline-flex;align-items: center;justify-content: center;transition: none;color: #f8f9fa;">Voted</h6>      
+                  @else
+                      <a href="{{route('user.voting.show',1)}}">Vote</i></a>              
+                  @endif  
+                </div>
+               </div>
+              <div class="member-info">
+                <h4>OptiGuide</h4>
+                <span>A Futuristic Visual Aid Comprised Of An AI-Powered Phone Application And Two Tactile Wristbands.</span>
+              </div>
+            </div>
+          </div>
           
 
 

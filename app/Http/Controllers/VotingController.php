@@ -22,7 +22,6 @@ class VotingController extends Controller
       $user_id = session()->get('id');
       $data=User::where('id',$user_id)->first();
       $team=Rate::where('user_id',$user_id)->get();
-
       $ratedTeamByUser = [];
       $i =  0;
       foreach ($team as $oneTeam) {
@@ -57,7 +56,7 @@ class VotingController extends Controller
     {
       $user_id = session()->get('id');
       // $team_id = session()->get('team_id');
-// dd($request);
+       // dd($request);
       $request->validate([
         'adaptation_to_the_market' => ['required'],
         'robustness_of_the_economic_model' => ['required'],

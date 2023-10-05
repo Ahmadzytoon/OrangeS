@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>VotePad -Voting results</title>
+  <title>JuryVote -Voting results</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/mobile_logo_1_0.png" rel="icon">
-  <link href="assets/mobile_logo_1_0.png" rel="apple-touch-icon">
+  <link href="/assets/mobile_logo_1_0.png" rel="icon">
+  <link href="/assets/mobile_logo_1_0.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -57,7 +57,7 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
       
-      <h1 class="logo me-auto"><a href="index.html" class="logo me-auto"><img src="/assets/logo.svg" alt=""></a><a href="index.html">VotePad</a></h1>
+      <h1 class="logo me-auto"><a href="index.html" class="logo me-auto"><img src="/assets/logo.svg" alt="JuryVote"></a><a>JuryVote</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
   
 
@@ -79,7 +79,7 @@
     <section class="breadcrumbs">
       <div class="container" style="
       margin-top: 16px;
-  ">
+                         ">
 
         <ol>
           <li><a href="index.html">OSC #2023</a></li>
@@ -95,6 +95,8 @@
     <br>
     
     <br>
+        <!-- ======= table1 ======= -->
+
         <div class="container" data-aos="fade-up">
   
           <div class="section-title">
@@ -153,8 +155,55 @@
           </div>
         </div>
         <br>
-        <!-- ======= table ======= -->
+        <!-- ======= table1 ======= -->
 
+
+        <!-- ======= table 2======= -->
+    <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Users Table</h2>
+          </div>
+
+          <div class="row">
+            <table class="table table-hover">
+              <thead>
+
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name User</th>
+                  <th scope="col">Number Of Voted Teams /5</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <?php $z=0 ?>
+                <?php $x=1 ?>
+  @foreach ($users as $user)
+
+                <tr>  
+                  <th scope="row">{{$x}}</th>
+                  <td>{{$user->name}}</td>
+
+                  
+                  @foreach ($data as $rate)
+@if ($user->id==$rate->user_id)
+<?php $z+=1 ?>
+  
+@endif
+                  
+
+                  @endforeach
+  <td>{{$z}}</td>
+                  <?php $x+=1 ?>
+                  <?php $z=0 ?>
+                </tr>
+@endforeach
+
+              </tbody>
+            </table>
+          </div>
+        </div>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

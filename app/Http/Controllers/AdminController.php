@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Rate;
 use App\Models\Team;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class AdminController extends Controller
@@ -17,12 +18,14 @@ class AdminController extends Controller
     {
       $data = Rate::all();
       $team = Team::all();
-    $results = DB::table('rates')  // قم بتغيير your_table_name إلى اسم الجدول الخاص بك
+      $users=User::all();
+
+    $results = DB::table('rates')
     ->select('user_id', 'team_id', DB::raw('SUM(average) as total_average'))
     ->groupBy('user_id', 'team_id')
     ->get();
     // dd($results);
-      return view('admin.results',['data'=>$data,'teams'=>$team,'results'=>$results,]);
+      return view('admin.results',['data'=>$data,'teams'=>$team,'results'=>$results,'users'=>$users]);
     }
 
     /**

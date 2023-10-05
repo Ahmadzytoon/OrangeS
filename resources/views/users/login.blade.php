@@ -54,7 +54,7 @@
 						ODC 
 					</span>
 					<span class="login100-form-title p-b-48">
-            <img src="login/mobile_logo_1_0.png" alt=""> 
+            <img src="login/mobile_logo_1_0.png" alt="JuryVote"> 
 					</span>
 
 					<div class="wrap-input100 " >
