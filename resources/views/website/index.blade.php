@@ -77,7 +77,7 @@
             }
         </style>
 @if(session()->get('voted'))
-        <script>    // التنقل إلى العنصر عند تحميل الصفحة
+        <script>   
                 document.addEventListener('DOMContentLoaded', function() {
                     scrollToElement();
                 });
@@ -98,7 +98,8 @@
                             behavior: 'smooth' // تمرير بشكل سلس
                         });
                     }
-                }</script>
+                }
+           </script>
   @endif              
 </head>
 <!-- 
@@ -215,7 +216,7 @@ BagGuard
                 </div>
               </div>
               <div class="member-info">
-                <h4>Tefli</h4>
+                <h4>TEFLI</h4>
                 <span>A Baby Monitoring Device That Analyzes And Predicts A Baby's Needs Based On Their Cry.</span>
               </div>
             </div>
@@ -253,7 +254,7 @@ BagGuard
                 </div>
               </div>
               <div class="member-info">
-                <h4>Solar-AgriBot</h4>
+                <h4>AgriBot</h4>
                 <span>An Autonomous Agricultural Robot Designed To Revolutionize Modern Farming.</span>
               </div>
             </div>

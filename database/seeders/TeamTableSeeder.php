@@ -19,7 +19,7 @@ class TeamTableSeeder extends Seeder
             'description' => "OptiGuide, a cutting-edge visual aid, consists of an AI-powered mobile app and two tactile wristbands. The AI model's predictions guide users with low vision through vibrations.",
         ]);
         DB::table('teams')->insert([
-            'team_name' => 'Solar-AgriBot',
+            'team_name' => 'AgriBot',
             'description' => 'AgriBot is an Autonomous Agricultural Robot transforming modern farming. It integrates precision weed detection, eradication, real-time soil and plant health monitoring, and smart irrigation',
         ]);
         DB::table('teams')->insert([
@@ -27,7 +27,7 @@ class TeamTableSeeder extends Seeder
             'description' => 'AiGO is your pocket-sized time-travel guide buddy, providing immersive historical tours and interactive experiences at your fingertips.',
         ]);
         DB::table('teams')->insert([
-            'team_name' => 'Tefli',
+            'team_name' => 'TEFLI',
             'description' => "TEFLI is a baby monitoring device that analyzes and predicts a baby's needs based on their cry.",
         ]);
         DB::table('teams')->insert([
