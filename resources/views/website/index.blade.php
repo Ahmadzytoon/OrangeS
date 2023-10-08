@@ -144,7 +144,7 @@ BagGuard
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <div class="row">
         <div class="col-xl-6">
-          <h1>Orange Summer Challenge 2023</h1>
+          <h1 style="color: #000"><span style="color: #ff7900">Orange</span>  Summer Challenge 2023</h1>
           <!-- <h2></h2> -->
           <a href="#team" class="btn-get-started scrollto">Start Voting</a>
         </div>
