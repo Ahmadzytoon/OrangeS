@@ -24,26 +24,26 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'Marwan Jumaa',
-            'email' => 'marwan@marwanjuma.com',
+            'name' => 'Sinan Kamal',
+            'email' => 'sinan.kamal@orange.com',
             'password' => Hash::make('orange'),
             'image' => 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png',
         ]);
         DB::table('users')->insert([
-            'name' => 'Eng.Rana Dababneh',
-            'email' => 'rana.aldababneh@orange.com',
+            'name' => 'Omar Mashini',
+            'email' => 'omar.almashini@orange.com',
             'password' => Hash::make('orange'),
             'image' => 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png',
         ]);
         DB::table('users')->insert([
-            'name' => 'Mothana Gharaibeh',
-            'email' => 'm@gofifth.com',
+            'name' => 'Mohannad Abu Maizer',
+            'email' => 'muhannad.abumaizar@orange.com',
             'password' => Hash::make('orange'),
             'image' => 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png',
         ]);
         DB::table('users')->insert([
-            'name' => 'Dr.Ashraf Bany Mohammad',
-            'email' => 'ashraf.bany@gmail.com',
+            'name' => 'Nicola fanous',
+            'email' => 'nicola.fanous@orange.com',
             'password' => Hash::make('orange'),
             'image' => 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png',
         ]);
